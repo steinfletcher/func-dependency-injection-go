@@ -1,0 +1,1 @@
+# func-dependency-injection-go
