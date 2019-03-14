@@ -1,15 +1,14 @@
 package main
 
 import (
-	"github.com/steinfletcher/func-dependency-injection-go/user"
+	"github.com/steinfletcher/func-dependency-injection-go/app"
 	"log"
 	"net/http"
 )
 
-// run the following then call `curl -v localhost:8080/user`
+// run main then call `curl -v localhost:8080/user`
 
 func main() {
-	router := http.NewServeMux()
-	router.HandleFunc("/user", user.Get())
-	log.Fatal(http.ListenAndServe(":8080", router))
+	newApp := app.New()
+	log.Fatal(http.ListenAndServe(":8000", newApp.Router))
 }

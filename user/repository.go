@@ -7,6 +7,6 @@ type selectUserByID func(id string) string
 
 func newSelectUserByID() selectUserByID {
 	return func(id string) string {
-		return "jon"
+		return "jan"
 	}
 }
